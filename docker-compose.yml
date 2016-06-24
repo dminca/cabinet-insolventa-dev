@@ -1,5 +1,5 @@
 web:
-  build: ./docker/ubuntu
+  image: completit/dockerized-drupal
   ports:
     - "80:80"
     - "443:443"
