@@ -1,5 +1,5 @@
 web:
-  image: completit/dockerized-drupal
+  image: completit/dockerized-drupal:cli
   ports:
     - "80:80"
     - "443:443"
@@ -13,10 +13,10 @@ web:
 mysql:
   image: mysql:5.7
   environment:
-    - MYSQL_ROOT_PASSWORD=drupal
-    - MYSQL_DATABASE=lichida3_et3
-    - MYSQL_USER=lichida3_klopp
-    - MYSQL_PASSWORD=Xa4C1Vufeg8TNyZ
+    #    - MYSQL_ROOT_PASSWORD=drupal
+    - MYSQL_DATABASE=drupal
+    - MYSQL_USER=drupal
+    - MYSQL_PASSWORD=drupal
     - MYSQL_ALLOW_EMPTY_PASSWORD=yes
   volumes:
     - ./db:/app
